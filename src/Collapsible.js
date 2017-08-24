@@ -162,17 +162,21 @@ class Collapsible extends Component {
 
     return(
       <div className={parentClassString.trim()}>
-        <span 
-          className={triggerClassString.trim()} 
-          onClick={this.handleTriggerClick}>
-          {trigger}
-        </span>
-
+        <div className={'trigger-container'}>
+          <span className={'trigger-header'}>
+          {this.props.triggerHeader}
+          </span>
+          <span
+            className={triggerClassString.trim()}
+            onClick={this.handleTriggerClick}>
+            {trigger}
+          </span>
+        </div>
         {this.renderNonClickableTriggerElement()}
 
-        <div 
-          className={outerClassString.trim()} 
-          ref="outer" 
+        <div
+          className={outerClassString.trim()}
+          ref="outer"
           style={dropdownStyle}
           onTransitionEnd={this.handleTransitionEnd}
         >

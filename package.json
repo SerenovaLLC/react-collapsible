@@ -1,6 +1,7 @@
 {
   "name": "react-collapsible",
   "version": "2.0.0",
+  "main": "dist/Collapsible.js",
   "description": "React component to wrap content in Collapsible element with trigger to open and close.",
   "keywords": [
     "react-component",
