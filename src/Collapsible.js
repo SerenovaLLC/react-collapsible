@@ -162,8 +162,8 @@ class Collapsible extends Component {
 
     return(
       <div className={parentClassString.trim()}>
-        <div className={'trigger-container'}>
-          <span className={'trigger-header'}>
+        <div className={'Collapsible__trigger-container'}>
+          <span className={'Collapsible__trigger-header'}>
           {this.props.triggerHeader}
           </span>
           <span

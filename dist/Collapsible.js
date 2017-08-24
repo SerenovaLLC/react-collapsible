@@ -199,10 +199,10 @@ var Collapsible = function (_Component) {
         { className: parentClassString.trim() },
         _react2.default.createElement(
           'div',
-          { className: 'trigger-container' },
+          { className: 'Collapsible__trigger-container' },
           _react2.default.createElement(
             'span',
-            { className: 'trigger-header' },
+            { className: 'Collapsible__trigger-header' },
             this.props.triggerHeader
           ),
           _react2.default.createElement(
