@@ -198,7 +198,7 @@ class Collapsible extends Component {
           </div>
           <Icon
             name="caret"
-            style={!this.state.isClosed && { transform: 'rotate(180deg)' }}
+            style={this.state.isClosed ? {} : { transform: 'rotate(180deg)' }}
           />
         </div>
         {this.renderNonClickableTriggerElement()}

@@ -222,7 +222,7 @@ var Collapsible = function (_Component) {
           ),
           _react2.default.createElement(Icon, {
             name: 'caret',
-            style: !this.state.isClosed && { transform: 'rotate(180deg)' }
+            style: this.state.isClosed ? {} : { transform: 'rotate(180deg)' }
           })
         ),
         this.renderNonClickableTriggerElement(),
