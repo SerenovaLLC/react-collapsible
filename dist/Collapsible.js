@@ -201,12 +201,12 @@ var Collapsible = function (_Component) {
         _react2.default.createElement(
           'div',
           {
-            className: 'Collapsible__trigger-container',
+            className: triggerContainerClassString,
             onClick: this.handleTriggerClick
           },
           _react2.default.createElement(
             'div',
-            { className: triggerContainerClassString },
+            { className: 'Collapsible__trigger-header' },
             this.props.triggerHeader
           ),
           _react2.default.createElement(
