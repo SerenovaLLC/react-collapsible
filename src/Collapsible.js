@@ -186,11 +186,13 @@ class Collapsible extends Component {
           className={triggerContainerClassString}
           onClick={this.handleTriggerClick}
         >
-          <div className={'Collapsible__trigger-header'}>
-            {this.props.triggerHeader}
-          </div>
-          <div className={triggerClassString.trim()}>
-            {trigger}
+          <div className={'Collapsible__trigger-text'}>
+            <div className={'Collapsible__trigger-header'}>
+              {this.props.triggerHeader}
+            </div>
+            <div className={triggerClassString.trim()}>
+              {trigger}
+            </div>
           </div>
         </div>
         {this.renderNonClickableTriggerElement()}

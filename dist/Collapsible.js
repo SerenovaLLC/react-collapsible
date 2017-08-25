@@ -206,13 +206,17 @@ var Collapsible = function (_Component) {
           },
           _react2.default.createElement(
             'div',
-            { className: 'Collapsible__trigger-header' },
-            this.props.triggerHeader
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: triggerClassString.trim() },
-            trigger
+            { className: 'Collapsible__trigger-text' },
+            _react2.default.createElement(
+              'div',
+              { className: 'Collapsible__trigger-header' },
+              this.props.triggerHeader
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: triggerClassString.trim() },
+              trigger
+            )
           )
         ),
         this.renderNonClickableTriggerElement(),
