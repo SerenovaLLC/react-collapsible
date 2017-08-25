@@ -200,7 +200,7 @@ class Collapsible extends Component {
             name="caret_large"
             style={
               this.state.isClosed
-                ? { marginTop: '6px' }
+                ? { marginTop: '6px', transition: 'transform 0.5s' }
                 : {
                     marginTop: '6px',
                     transform: 'rotate(180deg)',
