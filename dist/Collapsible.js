@@ -195,6 +195,8 @@ var Collapsible = function (_Component) {
       var outerClassString = this.props.classParentString + '__contentOuter ' + this.props.contentOuterClassName;
       var innerClassString = this.props.classParentString + '__contentInner ' + this.props.contentInnerClassName;
 
+      var Icon = this.props.icon;
+
       return _react2.default.createElement(
         'div',
         { className: parentClassString.trim() },
@@ -217,7 +219,11 @@ var Collapsible = function (_Component) {
               { className: triggerClassString.trim() },
               trigger
             )
-          )
+          ),
+          _react2.default.createElement(Icon, {
+            name: 'caret',
+            style: !this.state.isClosed && { transform: 'rotate(180deg)' }
+          })
         ),
         this.renderNonClickableTriggerElement(),
         _react2.default.createElement(

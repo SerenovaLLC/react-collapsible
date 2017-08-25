@@ -180,6 +180,8 @@ class Collapsible extends Component {
     const innerClassString = `${this.props
       .classParentString}__contentInner ${this.props.contentInnerClassName}`;
 
+    const Icon = this.props.icon;
+
     return (
       <div className={parentClassString.trim()}>
         <div
@@ -194,6 +196,10 @@ class Collapsible extends Component {
               {trigger}
             </div>
           </div>
+          <Icon
+            name="caret"
+            style={!this.state.isClosed && { transform: 'rotate(180deg)' }}
+          />
         </div>
         {this.renderNonClickableTriggerElement()}
 
