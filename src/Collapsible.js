@@ -204,6 +204,7 @@ class Collapsible extends Component {
                 : {
                     marginTop: '6px',
                     transform: 'rotate(180deg)',
+                    transition: 'transform 0.5s',
                   }
             }
           />

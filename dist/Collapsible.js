@@ -224,7 +224,8 @@ var Collapsible = function (_Component) {
             name: 'caret_large',
             style: this.state.isClosed ? { marginTop: '6px' } : {
               marginTop: '6px',
-              transform: 'rotate(180deg)'
+              transform: 'rotate(180deg)',
+              transition: 'transform 0.5s'
             }
           })
         ),
