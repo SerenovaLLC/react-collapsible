@@ -189,7 +189,8 @@ var Collapsible = function (_Component) {
       var children = this.state.isClosed && !this.state.inTransition ? null : this.props.children;
 
       // Construct CSS classes strings
-      var triggerClassString = this.props.classParentString + '__trigger ' + openClass + ' ' + disabledClass + ' ' + (this.state.isClosed ? this.props.triggerClassName : this.props.triggerOpenedClassName);
+      var triggerClassString = this.props.classParentString + '__trigger';
+      var triggerContainerClassString = this.props.classParentString + '__trigger-container ' + openClass + ' ' + disabledClass + ' ' + (this.state.isClosed ? this.props.triggerClassName : this.props.triggerOpenedClassName);
       var parentClassString = this.props.classParentString + ' ' + (this.state.isClosed ? this.props.className : this.props.openedClassName);
       var outerClassString = this.props.classParentString + '__contentOuter ' + this.props.contentOuterClassName;
       var innerClassString = this.props.classParentString + '__contentInner ' + this.props.contentInnerClassName;
@@ -199,17 +200,18 @@ var Collapsible = function (_Component) {
         { className: parentClassString.trim() },
         _react2.default.createElement(
           'div',
-          { className: 'Collapsible__trigger-container', onClick: this.handleTriggerClick },
+          {
+            className: 'Collapsible__trigger-container',
+            onClick: this.handleTriggerClick
+          },
           _react2.default.createElement(
             'div',
-            { className: 'Collapsible__trigger-header' },
+            { className: triggerContainerClassString },
             this.props.triggerHeader
           ),
           _react2.default.createElement(
             'div',
-            {
-              className: triggerClassString.trim()
-            },
+            { className: triggerClassString.trim() },
             trigger
           )
         ),
@@ -224,10 +226,7 @@ var Collapsible = function (_Component) {
           },
           _react2.default.createElement(
             'div',
-            {
-              className: innerClassString.trim(),
-              ref: 'inner'
-            },
+            { className: innerClassString.trim(), ref: 'inner' },
             children
           )
         )
